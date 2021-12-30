@@ -1,0 +1,53 @@
+// Main dashboard layout
+
+.lzs-layout {
+  display: flex;
+}
+
+.lzs-main {
+  flex: 1;
+  width: 100%;
+}
+
+@mixin category($bg, $color, $light) {
+  border-radius: 13.56px;
+  background-color: $light;
+  padding: 20px;
+  box-shadow: rgba($color, 0.2) 0px 7px 29px 0px;
+  align-items: center;
+
+  svg {
+    color: $color;
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.purple {
+  @include category((81, 69, 158), #51459e, #51459e50);
+}
+.green {
+  @include category((0, 135, 90), #00875a, rgba(0, 135, 90, 0.301));
+}
+.orange {
+  @include category((222, 53, 11), #de350b, rgba(222, 53, 11, 0.315));
+}
+.blue {
+  @include category((0, 82, 204), #0052cc, #0052cc5b);
+}
+
+// category
+.lzs-category {
+  padding: 5rem 0 2rem;
+
+  padding-top: 13rem;
+}
+
+.category-box {
+  figcaption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

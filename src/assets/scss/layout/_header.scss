@@ -1,0 +1,64 @@
+// Navbar
+
+.lzs-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.6rem;
+  border-bottom: 1px solid var(--faint-grey);
+  padding-bottom: 1rem;
+  position: fixed;
+  width: calc(100% - 15%);
+  background-color: #fff;
+  z-index: 99;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  box-shadow: rgba(149, 157, 165, 0.09) 0px 8px 24px;
+
+  img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  }
+
+  &__settings {
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      color: #8f92a1;
+    }
+
+    & > div:not(:last-child) {
+      padding-right: 2rem;
+    }
+  }
+
+  &__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .lzs-input {
+      margin-left: 2rem;
+    }
+
+    .search-btn {
+      position: absolute;
+      right: 18px;
+      top: 10px;
+      height: 2.5rem;
+      width: 2.5rem;
+      color: #8f92a1;
+    }
+
+    .toggle-btn {
+      svg {
+        height: 2.3rem;
+        width: 2.3rem;
+        color: var(--accent-color);
+      }
+    }
+  }
+}

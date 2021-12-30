@@ -1,0 +1,48 @@
+.lzs-sidebar {
+  height: 100vh;
+  padding: 1.6rem 2rem;
+  display: flex;
+  flex: 0 0 auto;
+  width: 15%;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-right: 1px solid #edf3fa;
+
+  a {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+
+  li {
+    padding: 0.65rem 0;
+
+    svg {
+      margin-right: 8px;
+      height: 18px;
+      width: 18px;
+    }
+  }
+}
+
+.lzs-top-nav {
+  &__logo {
+    margin-bottom: 6rem;
+  }
+}
+
+.lzs-contact {
+  h4 {
+    text-transform: uppercase;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+}

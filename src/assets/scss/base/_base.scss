@@ -1,0 +1,62 @@
+:root {
+  --text-color: #1b1c31;
+  --accent-color: #51459e;
+  --accent-alt: #84e8f4;
+  --faint-grey: #edf3fa;
+
+  --font-stack: 'DM Sans', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-family: var(--font-stack);
+}
+
+/* =================================================================
+* Basic styles reset
+*/
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.lzs-input {
+  border: none;
+  height: 40px;
+  border-radius: 7px;
+  background: #ffffff;
+  border: 1px solid #e9edf4;
+
+  padding: 1rem 1.03rem;
+
+  @media (min-width: 992px) {
+    height: 40px;
+    border-radius: 7px;
+    background: #ffffff;
+    border: 1px solid #e9edf4;
+  }
+  @media (min-width: 1135px) {
+    width: 350px;
+  }
+}
