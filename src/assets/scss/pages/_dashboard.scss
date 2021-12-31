@@ -37,10 +37,13 @@
   @include category((0, 82, 204), #0052cc, #0052cc5b);
 }
 
-// category
-.lzs-category {
+.lzs-category,
+.lzs-sales,
+.lzs-products,
+.lzs-users,
+.lzs-messages,
+.lzs-support {
   padding: 5rem 0 2rem;
-
   padding-top: 13rem;
 }
 

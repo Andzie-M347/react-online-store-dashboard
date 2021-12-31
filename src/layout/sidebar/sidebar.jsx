@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/img/logo.svg';
 
 import { IoChatbubblesOutline } from 'react-icons/io5';
@@ -11,39 +12,39 @@ export const Sidebar = () => {
     <aside className='lzs-sidebar'>
       <div className='lzs-top-nav'>
         <div className='lzs-top-nav__logo'>
-          <a href='#'>
+          <Link to='/'>
             <Logo height='20' />
-          </a>
+          </Link>
         </div>
 
         <div className='lzs-top-nav__menu'>
           <ul>
             <li>
-              <a href='#'>
+              <Link to='/'>
                 <BsGrid />
                 <span> Dashboard </span>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href='#'>
+              <Link to='/sales/'>
                 <BsGraphUp />
                 <span> Sales </span>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href='#'>
+              <Link to='/products/'>
                 <FiShoppingBag />
                 <span> Products </span>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href='#'>
+              <Link to='/users/'>
                 <FiUsers />
                 <span>Users</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -56,13 +57,13 @@ export const Sidebar = () => {
             <span>
               <IoChatbubblesOutline />
             </span>
-            <a href='#'>Messages</a>
+            <Link to='/messages/'>Messages</Link>
           </li>
           <li>
-            <a href='#'>
+            <Link to='/support'>
               <MdOutlineContactSupport />
               <span> Support </span>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

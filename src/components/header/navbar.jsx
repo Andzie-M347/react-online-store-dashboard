@@ -29,7 +29,7 @@ export default function Navbar() {
           <IoSettingsOutline />
         </div>
         <div className='lzs-navbar__settings--user'>
-          <img src={user} alt='user image' />
+          <img src={user} alt='user' />
         </div>
       </div>
     </nav>

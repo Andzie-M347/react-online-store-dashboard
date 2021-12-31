@@ -182,7 +182,12 @@ li {
     width: 3rem;
     margin-bottom: 1rem; }
 
-.lzs-category {
+.lzs-category,
+.lzs-sales,
+.lzs-products,
+.lzs-users,
+.lzs-messages,
+.lzs-support {
   padding: 5rem 0 2rem;
   padding-top: 13rem; }
 
