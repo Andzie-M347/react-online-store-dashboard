@@ -1,8 +1,9 @@
 import { Category } from '../components/category-box';
 
-import { MdDashboardCustomize, MdOutlineShopTwo } from 'react-icons/md';
+import { MdOutlineShopTwo } from 'react-icons/md';
 import { BsShop } from 'react-icons/bs';
 import { FiUsers } from 'react-icons/fi';
+import { IoWalletOutline } from 'react-icons/io5';
 
 export const Categories = () => {
   return (
@@ -11,7 +12,7 @@ export const Categories = () => {
         <div className='col-lg-6 col-md-12 col-sm-12 col-xl-3'>
           <Category
             title='Revenue'
-            icon={<MdDashboardCustomize />}
+            icon={<IoWalletOutline />}
             color='purple'
             duration='Past 12 days'
             price={44.278}

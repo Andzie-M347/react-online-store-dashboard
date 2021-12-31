@@ -163,7 +163,7 @@ li {
   padding-top: 15px; }
   .lzs-submenu a {
     font-size: 1.3rem;
-    color: var(--dark-grey);
+    color: var(--text-color);
     font-weight: 400; }
 
 .lzs-layout {
