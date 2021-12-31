@@ -1,7 +1,7 @@
 export const UpdateUser = () => {
   return (
-    <div>
+    <section className='lzs-update-user'>
       <h4>Update User</h4>
-    </div>
+    </section>
   );
 };

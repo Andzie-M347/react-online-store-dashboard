@@ -4,6 +4,7 @@
   --accent-color: #51459e;
   --accent-alt: #84e8f4;
   --faint-grey: #edf3fa;
+  --dark-grey: #a4b6ca;
   --font-stack: 'DM Sans', sans-serif; }
 
 *,
@@ -18,7 +19,8 @@ html {
 body {
   font-size: 1.6rem;
   line-height: 1.8;
-  font-family: var(--font-stack); }
+  font-family: var(--font-stack);
+  color: var(--text-color); }
 
 /* =================================================================
 * Basic styles reset
@@ -38,6 +40,10 @@ li {
   background: #ffffff;
   border: 1px solid #e9edf4;
   padding: 1rem 1.03rem; }
+  .lzs-input:focus {
+    outline: none; }
+  .lzs-input::placeholder {
+    font-size: 1.4rem; }
   @media (min-width: 992px) {
     .lzs-input {
       height: 40px;
@@ -74,6 +80,23 @@ li {
       color: #8f92a1; }
     .lzs-navbar__settings > div:not(:last-child) {
       padding-right: 2rem; }
+    .lzs-navbar__settings--setting svg {
+      animation: spin 2s infinite linear; }
+    .lzs-navbar__settings--notifications {
+      position: relative; }
+      .lzs-navbar__settings--notifications-value {
+        position: absolute;
+        top: -2px;
+        right: 20px;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        text-align: center;
+        background-color: var(--accent-color);
+        color: #fff;
+        border-radius: 50%;
+        font-size: 1rem;
+        animation: pulse 1s linear infinite; }
   .lzs-navbar__search {
     position: relative;
     display: flex;
@@ -91,6 +114,14 @@ li {
       height: 2.3rem;
       width: 2.3rem;
       color: var(--accent-color); }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
 
 .lzs-sidebar {
   height: 100vh;
@@ -126,6 +157,14 @@ li {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 2rem; }
+
+.lzs-submenu {
+  padding-left: calc(18px + 8px);
+  padding-top: 15px; }
+  .lzs-submenu a {
+    font-size: 1.3rem;
+    color: var(--dark-grey);
+    font-weight: 400; }
 
 .lzs-layout {
   display: flex; }
@@ -187,7 +226,10 @@ li {
 .lzs-products,
 .lzs-users,
 .lzs-messages,
-.lzs-support {
+.lzs-support,
+.lzs-create-user,
+.lzs-delete-user,
+.lzs-update-user {
   padding: 5rem 0 2rem;
   padding-top: 13rem; }
 

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/img/logo.svg';
 
@@ -6,8 +7,13 @@ import { BsGrid, BsGraphUp } from 'react-icons/bs';
 import { MdOutlineContactSupport } from 'react-icons/md';
 
 import { FiShoppingBag, FiUsers } from 'react-icons/fi';
+import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 
 export const Sidebar = () => {
+  const [submenu, setSubmenu] = useState(false);
+
+  const showSubmenu = () => setSubmenu(!submenu);
+
   return (
     <aside className='lzs-sidebar'>
       <div className='lzs-top-nav'>
@@ -40,11 +46,36 @@ export const Sidebar = () => {
               </Link>
             </li>
 
-            <li>
-              <Link to='/users/'>
-                <FiUsers />
-                <span>Users</span>
+            <li onClick={showSubmenu}>
+              <Link
+                to='/users/'
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}
+              >
+                <div>
+                  <FiUsers />
+                  <span>Users</span>
+                </div>
+
+                <span>{submenu ? <BiChevronUp /> : <BiChevronDown />}</span>
               </Link>
+
+              {submenu && (
+                <ul className='lzs-submenu'>
+                  <li>
+                    <Link to='/user/create/'> &raquo; Create User</Link>
+                  </li>
+                  <li>
+                    <Link to='/user/delete/'> &raquo; Delete User</Link>
+                  </li>
+                  <li>
+                    <Link to='/user/update/'> &raquo; Update User</Link>
+                  </li>
+                </ul>
+              )}
             </li>
           </ul>
         </div>

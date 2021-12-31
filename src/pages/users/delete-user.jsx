@@ -1,7 +1,7 @@
 export const DeleteUser = () => {
   return (
-    <div>
+    <section className='lzs-delete-user'>
       <h4>Delete User</h4>
-    </div>
+    </section>
   );
 };

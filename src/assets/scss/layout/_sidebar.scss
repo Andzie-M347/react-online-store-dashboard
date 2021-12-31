@@ -46,3 +46,15 @@
     margin-bottom: 2rem;
   }
 }
+
+// Submenu
+.lzs-submenu {
+  padding-left: calc(18px + 8px);
+  padding-top: 15px;
+
+  a {
+    font-size: 1.3rem;
+    color: var(--dark-grey);
+    font-weight: 400;
+  }
+}

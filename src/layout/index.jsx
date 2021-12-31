@@ -13,9 +13,10 @@ export const Layout = ({ children }) => {
             <Navbar />
             <div className='container-fluid'>{children}</div>
           </div>
+
+          <Footer />
         </main>
       </div>
-      {/* <Footer /> */}
     </React.Fragment>
   );
 };

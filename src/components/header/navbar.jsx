@@ -13,7 +13,7 @@ export default function Navbar() {
           <CgMenuLeft />
         </div>
         <input
-          type='search'
+          type='text'
           placeholder='Search for results...'
           className='lzs-input'
         />
@@ -24,8 +24,10 @@ export default function Navbar() {
       <div className='lzs-navbar__settings'>
         <div className='lzs-navbar__settings--notifications'>
           <IoMdNotificationsOutline />
+
+          <span className='lzs-navbar__settings--notifications-value'>2</span>
         </div>
-        <div className='lzs-navbar__settings--settings'>
+        <div className='lzs-navbar__settings--setting'>
           <IoSettingsOutline />
         </div>
         <div className='lzs-navbar__settings--user'>

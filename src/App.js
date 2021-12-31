@@ -26,6 +26,9 @@ export const App = () => {
             <Route path='/sales' element={<Sales />} />
             <Route path='/products' element={<Products />} />
             <Route path='/users' element={<Users />} />
+            <Route path='/user/create' element={<CreateUser />} />
+            <Route path='/user/update' element={<UpdateUser />} />
+            <Route path='/user/delete' element={<DeleteUser />} />
             <Route path='/messages' element={<Messages />} />
             <Route path='/support' element={<Support />} />
           </Routes>

@@ -1,7 +1,7 @@
 export const CreateUser = () => {
   return (
-    <div>
+    <section className='lzs-create-user'>
       <h4>Create User</h4>
-    </div>
+    </section>
   );
 };

@@ -3,11 +3,10 @@
   --accent-color: #51459e;
   --accent-alt: #84e8f4;
   --faint-grey: #edf3fa;
+  --dark-grey: #a4b6ca;
 
   --font-stack: 'DM Sans', sans-serif;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
 *,
 *::after,
@@ -24,6 +23,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.8;
   font-family: var(--font-stack);
+  color: var(--text-color);
 }
 
 /* =================================================================
@@ -49,6 +49,14 @@ li {
   border: 1px solid #e9edf4;
 
   padding: 1rem 1.03rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: 1.4rem;
+  }
 
   @media (min-width: 992px) {
     height: 40px;
