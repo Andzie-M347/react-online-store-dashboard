@@ -18,16 +18,24 @@
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
+    cursor: pointer;
   }
 
   &__settings {
     display: flex;
     align-items: center;
 
+    &--notifications,
+    &--setting,
+    &--user {
+      position: relative;
+    }
+
     svg {
       width: 2rem;
       height: 2rem;
       color: #8f92a1;
+      cursor: pointer;
     }
 
     & > div:not(:last-child) {
@@ -41,15 +49,13 @@
     }
 
     &--notifications {
-      position: relative;
-
       &-value {
         position: absolute;
         top: -2px;
-        right: 20px;
-        height: 15px;
-        width: 15px;
-        line-height: 15px;
+        right: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+        line-height: 1.5rem;
         text-align: center;
         background-color: var(--accent-color);
         color: #fff;
@@ -96,5 +102,123 @@
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
+  }
+}
+
+// Dropdown
+
+.lzs-header {
+  position: relative;
+}
+.dropdown {
+  position: absolute;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: 1px solid #e9edf4;
+  float: left;
+  max-width: 32rem;
+  width: max-content;
+  background-color: #fff;
+  z-index: 99;
+  right: 0;
+  // top: 38px;
+  left: auto;
+  border-radius: 7px;
+  padding: 1.6rem;
+  // overflow: hidden;
+  // transform: scale(0);
+  transition: all 0.2s ease;
+  transform-origin: top right;
+  display: none;
+
+  &::before {
+    content: '';
+    left: auto;
+    right: 1.2rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    background: #fff;
+    position: absolute;
+    top: -7px;
+    right: 2.8rem;
+    z-index: 99;
+    transform: rotate(45deg);
+    border-top: 1px solid #e9edf4;
+    border-left: 1px solid #e9edf4;
+  }
+
+  .notification-item,
+  .user-item-content {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    border-bottom: 1px solid #e9edf4;
+    padding: 1.5rem 0;
+
+    small {
+      color: var(--dark-grey);
+      font-size: 1.25rem;
+    }
+
+    h5 {
+      font-size: 1.4rem;
+    }
+
+    &__icon {
+      flex: 0 0 5%;
+
+      span {
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        line-height: 2.5rem;
+        text-align: center;
+        background-color: rgba(133, 233, 244, 0.185);
+        padding: 8px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+
+      i {
+        font-size: 18px;
+        color: var(--accent-alt);
+      }
+    }
+
+    &__content {
+      flex: 1;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  &__footer {
+    padding: 2rem 0;
+    text-align: center;
+
+    a {
+      font-size: 1.5rem;
+      color: var(--dark-grey);
+    }
+  }
+}
+
+.dropdown.show {
+  transform: scale(1);
+  display: block;
+  transition: all 0.4s ease-in-out;
+}
+
+// Dropdown user
+
+.user-header {
+  text-align: center;
+  border-bottom: 1px solid #e9edf4;
+  margin-bottom: 1rem;
+  padding: 1.2rem 0;
+
+  small {
+    color: var(--dark-grey);
   }
 }

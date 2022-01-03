@@ -23,7 +23,7 @@ export const Sidebar = () => {
         <div className='lzs-top-nav__menu'>
           <ul>
             {navItems.map((item, index) => (
-              <li key={index} onClick={item.subItems ? showSubmenu : ''}>
+              <li key={index} onClick={item.subItems ? showSubmenu : undefined}>
                 <Link
                   to={item.link}
                   style={{

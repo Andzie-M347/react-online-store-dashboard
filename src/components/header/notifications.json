@@ -1,0 +1,24 @@
+[
+  {
+    "content": "New application started",
+    "icon": "bi bi-envelope-open",
+    "days": "7 days ago"
+  },
+
+  {
+    "content": "Project is due in 2 weeks",
+    "icon": "bi bi-calendar-date",
+    "days": "2 hours ago"
+  },
+  {
+    "content": "New order recieved",
+    "icon": "bi bi-cart-check",
+    "days": "15 minutes ago"
+  },
+
+  {
+    "content": "You didn't meet your sales deadline",
+    "icon": "bi bi-cart-check",
+    "days": "1 day ago"
+  }
+]
