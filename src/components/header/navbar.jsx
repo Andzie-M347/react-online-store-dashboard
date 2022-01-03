@@ -12,6 +12,7 @@ import notifications from './notifications.json';
 import userData from './user.json';
 
 import { Dropdown } from '../dropdown/dropdown';
+import { ThemeSettings } from './settings/theme-settings';
 
 const renderNotifications = (item, index) => (
   <div className='notification-item' key={index}>
@@ -91,7 +92,7 @@ export default function Navbar() {
           />
         </div>
         <div className='lzs-navbar__settings--setting'>
-          <Dropdown icon={<IoSettingsOutline />} />
+          <ThemeSettings icon={<IoSettingsOutline />} />
         </div>
         <div className='lzs-navbar__settings--user'>
           <Dropdown

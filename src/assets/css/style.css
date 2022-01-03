@@ -5,7 +5,8 @@
   --accent-alt: #84e8f4;
   --faint-grey: #edf3fa;
   --dark-grey: #a4b6ca;
-  --font-stack: 'DM Sans', sans-serif; }
+  --font-stack: 'DM Sans', sans-serif;
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; }
 
 *,
 *::after,
@@ -132,7 +133,7 @@ a {
 
 .dropdown {
   position: absolute;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: var(--shadow);
   border: 1px solid #e9edf4;
   float: left;
   max-width: 32rem;
@@ -217,6 +218,45 @@ a {
   padding: 1.2rem 0; }
   .user-header small {
     color: var(--dark-grey); }
+
+.lzs-settings {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  background: #fff;
+  height: 100vh;
+  padding: 4rem 3rem;
+  width: 30rem;
+  z-index: 99;
+  box-shadow: var(--shadow);
+  font-size: 1.4rem;
+  transition: right 0.5s cubic-bezier(0.55, 0.48, 0.79, 0.7); }
+  .lzs-settings__header {
+    margin-bottom: 4rem; }
+    .lzs-settings__header h3 {
+      text-transform: uppercase;
+      font-size: 1.4rem; }
+  .lzs-settings h4 {
+    margin-bottom: 2rem;
+    background: var(--faint-grey);
+    padding: 1.25rem; }
+  .lzs-settings__content li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer; }
+    .lzs-settings__content li div {
+      height: 4rem;
+      width: 4rem;
+      text-align: center;
+      border-radius: 50%;
+      margin-right: 2rem;
+      margin-bottom: 1.2rem;
+      padding: 2px;
+      position: relative; }
+
+.lzs-settings.show {
+  right: 0; }
 
 .lzs-sidebar {
   height: 100vh;
@@ -335,3 +375,25 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+
+.accent-primary {
+  background: var(--accent-color);
+  color: #fff; }
+  .accent-primary a,
+  .accent-primary svg {
+    color: var(--accent-color); }
+
+.accent-secondary {
+  background: var(--accent-alt);
+  color: #fff; }
+  .accent-secondary a,
+  .accent-secondary svg {
+    color: var(--accent-alt); }
+
+.light-background {
+  background-color: #fff;
+  color: var(--text-color); }
+
+.dark-background {
+  background-color: #2a2a4a;
+  color: #fff; }

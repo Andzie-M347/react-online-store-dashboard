@@ -1,0 +1,28 @@
+// primary accent color
+.accent-primary {
+  background: var(--accent-color);
+  color: #fff;
+  a,
+  svg {
+    color: var(--accent-color);
+  }
+}
+// primary accent color
+.accent-secondary {
+  background: var(--accent-alt);
+  color: #fff;
+  a,
+  svg {
+    color: var(--accent-alt);
+  }
+}
+
+.light-background {
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+.dark-background {
+  background-color: #2a2a4a;
+  color: #fff;
+}

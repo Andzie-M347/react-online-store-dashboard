@@ -112,7 +112,7 @@
 }
 .dropdown {
   position: absolute;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: var(--shadow);
   border: 1px solid #e9edf4;
   float: left;
   max-width: 32rem;
@@ -221,4 +221,57 @@
   small {
     color: var(--dark-grey);
   }
+}
+// lsz setting header
+
+.lzs-settings {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  background: #fff;
+  height: 100vh;
+  padding: 4rem 3rem;
+  width: 30rem;
+  z-index: 99;
+  box-shadow: var(--shadow);
+  font-size: 1.4rem;
+  transition: right 0.5s cubic-bezier(0.55, 0.48, 0.79, 0.7);
+
+  &__header {
+    margin-bottom: 4rem;
+
+    h3 {
+      text-transform: uppercase;
+      font-size: 1.4rem;
+    }
+  }
+
+  h4 {
+    margin-bottom: 2rem;
+    background: var(--faint-grey);
+    padding: 1.25rem;
+  }
+
+  &__content {
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+
+      div {
+        height: 4rem;
+        width: 4rem;
+        text-align: center;
+        border-radius: 50%;
+        margin-right: 2rem;
+        margin-bottom: 1.2rem;
+        padding: 2px;
+        position: relative;
+      }
+    }
+  }
+}
+.lzs-settings.show {
+  right: 0;
 }
