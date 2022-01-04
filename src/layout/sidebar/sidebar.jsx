@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/img/logo.svg';
 
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
+import { GoArrowSmallRight } from 'react-icons/go';
 
 import { navItems, contactData } from './sidebarItems';
 
@@ -47,7 +48,10 @@ export const Sidebar = () => {
                   <ul className='lzs-submenu'>
                     {item.subItems.map((item, index) => (
                       <li key={index}>
-                        <Link to={item.link}>&raquo; {item.label}</Link>
+                        <Link to={item.link}>
+                          <GoArrowSmallRight />
+                          {item.label}
+                        </Link>
                       </li>
                     ))}
                   </ul>

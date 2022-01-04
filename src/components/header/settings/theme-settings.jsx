@@ -1,4 +1,7 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
+
+import themeAction from '../../../redux/actions/Actions';
+import { useDispatch } from 'react-redux';
 
 const mode = [
   {
@@ -39,6 +42,11 @@ const outsideClickHandler = (content_ref, toggle_ref) => {
 };
 
 export const ThemeSettings = ({ icon }) => {
+  const [currentMode, setCurrentMode] = useState('default');
+  const [colorScheme, setColorScheme] = useState('primary');
+
+  const dispatch = useDispatch();
+
   const menu_ref = useRef(null);
   const toggle_ref = useRef(null);
 
@@ -47,6 +55,31 @@ export const ThemeSettings = ({ icon }) => {
   const settingsToggleHandler = () => {
     menu_ref.current.classList.add('show');
   };
+
+  const setMode = (mode) => {
+    setCurrentMode(mode.id);
+    localStorage.setItem('mode', mode.class);
+
+    dispatch(themeAction.setMode(mode.class));
+  };
+
+  const setColor = (colors) => {
+    setColorScheme(colors);
+    localStorage.setItem('color', colors.class);
+    dispatch(themeAction.setColor(colors.class));
+  };
+
+  useEffect(() => {
+    const _mode = mode.find(
+      (e) => e.class === localStorage.getItem('mode', 'light-background')
+    );
+    const _colors = colors.find(
+      (e) => e.class === localStorage.getItem('color', 'accent-primary')
+    );
+
+    if (_mode === undefined) setCurrentMode(_mode.id);
+    if (_colors === undefined) setColorScheme(_colors.id);
+  }, []);
 
   return (
     <div>
@@ -67,10 +100,15 @@ export const ThemeSettings = ({ icon }) => {
             <h4>Choose Mode</h4>
 
             <ul>
-              {mode.map((mode, index) => (
+              {mode.map((item, index) => (
                 <li key={index}>
-                  <span>{mode.name} </span>
-                  <div className={`mode-selector ${mode.class}`} />
+                  <span>{item.name} </span>
+                  <div
+                    className={`mode-selector ${item.class} ${item.class} ${
+                      item.id === currentMode ? 'active' : ''
+                    }`}
+                    onClick={() => setMode(item)}
+                  />
                 </li>
               ))}
             </ul>
@@ -79,10 +117,15 @@ export const ThemeSettings = ({ icon }) => {
             <h4>Choose Color Scheme</h4>
 
             <ul>
-              {colors.map((mode, index) => (
+              {colors.map((item, index) => (
                 <li key={index}>
-                  <span>{mode.name} </span>
-                  <div className={`color-selector ${mode.class}`} />
+                  <span>{item.name} </span>
+                  <div
+                    className={`color-selector ${item.class} ${
+                      item.id === colorScheme ? 'active' : ''
+                    } `}
+                    onClick={() => setColor(item)}
+                  />
                 </li>
               ))}
             </ul>

@@ -24,10 +24,14 @@ export const navItems = [
 
   {
     label: 'Users',
-    link: '/users/',
+    link: '#',
     icon: <FiUsers />,
 
     subItems: [
+      {
+        label: 'Users List',
+        link: '/users',
+      },
       {
         label: 'Create User',
         link: '/user/create',

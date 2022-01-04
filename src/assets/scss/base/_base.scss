@@ -1,12 +1,18 @@
 :root {
   --text-color: #1b1c31;
   --accent-color: #51459e;
-  --accent-alt: #84e8f4;
+  --accent-alt: #fb6d6c;
   --faint-grey: #edf3fa;
   --dark-grey: #a4b6ca;
 
+  // Dark mode
+  --bg-dark: #1a1a3c;
+  --bg-mild: #2a2a4a;
+  --dark-border: rgba(255, 255, 255, 0.1);
+
   --font-stack: 'DM Sans', sans-serif;
 
+  --transition: cubic-bezier(0.55, 0.48, 0.79, 0.7);
   --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
@@ -48,7 +54,6 @@ a {
   border: none;
   height: 40px;
   border-radius: 7px;
-  background: #ffffff;
   border: 1px solid #e9edf4;
 
   padding: 1rem 1.03rem;
@@ -64,8 +69,6 @@ a {
   @media (min-width: 992px) {
     height: 40px;
     border-radius: 7px;
-    background: #ffffff;
-    border: 1px solid #e9edf4;
   }
   @media (min-width: 1135px) {
     width: 350px;
