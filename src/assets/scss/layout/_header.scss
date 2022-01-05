@@ -2,6 +2,7 @@
 
 .lzs-navbar {
   display: flex;
+  background-color: #fff;
   justify-content: space-between;
   padding-top: 1.6rem;
   border-bottom: 1px solid var(--faint-grey);
@@ -28,13 +29,13 @@
     &--setting,
     &--user {
       position: relative;
+      cursor: pointer;
     }
 
     svg {
       width: 2rem;
       height: 2rem;
       color: #8f92a1;
-      cursor: pointer;
     }
 
     & > div:not(:last-child) {
@@ -173,6 +174,12 @@
         padding: 8px;
         border-radius: 50%;
         margin-right: 15px;
+
+        background: #acd5c7;
+
+        i {
+          color: #00875a;
+        }
       }
     }
 
@@ -264,6 +271,13 @@
     }
   }
 }
+
+.mode-selector.active::before {
+  content: '\2713';
+  font-size: 16px;
+  line-height: calc(16px * 2);
+}
+
 .lzs-settings.show {
   right: 0;
 }

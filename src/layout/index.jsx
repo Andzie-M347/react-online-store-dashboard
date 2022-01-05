@@ -4,7 +4,7 @@ import Navbar from '../components/header/navbar';
 import Footer from './footer/footer';
 import { Sidebar } from './sidebar/sidebar';
 
-import themeAction from '../redux/actions/Actions';
+import themeAction from '../redux/actions/actions';
 
 export const Layout = ({ children }) => {
   const theme = useSelector((state) => state.theme);

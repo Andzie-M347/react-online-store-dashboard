@@ -6,6 +6,7 @@
 
 .lzs-main {
   flex: 1;
+  background-color: #f7f7f7;
   width: 100%;
 }
 
@@ -55,5 +56,64 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+/* --------------------------------
+* Users Table
+* -------------------------------- */
+
+.lzs-users {
+  .table > :not(:first-child) {
+    border-top: unset;
+  }
+  &__table {
+    padding: 2.4rem;
+    box-shadow: var(--shadow);
+    background-color: #fff;
+    font-size: 1.4rem;
+
+    thead {
+      th {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.3rem;
+      }
+    }
+
+    th {
+      font-weight: 400;
+      padding: 1.2rem;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    border: 0;
+    padding: 2px 0.7rem;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-out;
+
+    &:first-child,
+    &:last-child {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
   }
 }
